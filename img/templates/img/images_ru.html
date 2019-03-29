@@ -1,0 +1,9 @@
+{% extends 'img/base_ru.html' %}
+
+{% block content %}
+	{% for img in posts %}
+		<div class="img">
+			<a href="{{ img.image.url }}" target="_blank"><img src = "{{ img.image.url }}" width="600" ></a>
+		</div>
+	{% endfor %}
+{% endblock %}

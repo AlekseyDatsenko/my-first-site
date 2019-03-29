@@ -1,0 +1,17 @@
+.col-md-8 {
+	text-align: center;
+}
+
+img  {
+	margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+	font-family: 'Neucha';
+}
+
+#toTop {
+position:fixed;
+bottom:20px; /* отступ кнопки от нижнего края страницы*/
+right:20px;
+}

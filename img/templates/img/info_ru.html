@@ -1,0 +1,8 @@
+{% extends 'img/base_ru.html' %}
+
+{% block content %}
+{% for i in inform %}
+	<h1></h1>
+	<h2>{{ i.description|linebreaksbr }}</h2>
+{% endfor %}
+{% endblock %}

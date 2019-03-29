@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photoshop</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/img.css' %}">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+  </head>
+  <body>
+	<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+	<p></p>
+    <div>
+		<img src="/static/logo/1.jpg" width="800">
+    </div>
+	<p></p>
+	<div class="btn-group">
+		<a href="{% url 'index' %}"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-picture"></span>
+ Images</button></a>
+		<a href="{%	url	'info' %}"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-info-sign"></span>
+ Info</button></a>
+		<a href="{%	url	'contact' %}"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-send"></span>
+ Contact</button></a>
+		<a href="{%	url	'ru' %}"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-share-alt"></span>
+ RU</button></a>
+	</div>
+    <h1></h1>
+    {% block content %}
+    {% endblock %}
+    <h1></h1>
+	<h3>--- by DAS ---</h3>
+	</div>
+	<div class="col-md-2"></div>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<DIV ID = "toTop" ><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-chevron-up"></span>
+</button></ DIV >
+  </body>
+</html>

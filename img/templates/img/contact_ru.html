@@ -1,0 +1,10 @@
+{% extends 'img/base_ru.html' %}
+
+{% block content %}
+{% for i in contact %}
+	<h1>Телефон:</h1>
+	<h2>{{ i.phone }}</h2>
+	<h1>Почта:</h1>
+	<h2>{{ i.email }}</h2>
+{% endfor %}
+{% endblock %}
